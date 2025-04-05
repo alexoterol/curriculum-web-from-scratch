@@ -1,0 +1,59 @@
+header{
+    min-height: 200dvh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.headerOPV{
+    min-height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    mix-blend-mode: difference;
+    justify-content: space-evenly;
+    
+
+}
+
+.header__title{
+    
+}
+
+.header__title--text{
+    padding: auto;
+}
+
+.header__description{
+    width: 25dvw;
+}
+
+
+.header__flipcard{
+
+    animation: appear-animation both;
+    animation-timeline: scroll();
+
+}
+
+@keyframes appear-animation {
+    0%{
+        opacity: 0;
+        display: none;
+        filter: grayscale();
+        translate: 0 -20%;
+        scale: .8;
+    }
+    100%{
+        opacity: 1;
+        display: block;
+        filter: grayscale();
+        translate: 0 0;
+        scale: 1;
+    }
+}

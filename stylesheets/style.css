@@ -1,0 +1,97 @@
+:root{
+    font-size: 20px;  /* 1rem =16 pixels */
+    /* Spacing */
+    --margin-xxs: .25rem;
+    --margin-xs: .50rem;
+    --margin-s: .75rem;
+    --margin-m: 1rem;
+    --margin-l: 1.25rem;
+    --margin-xl: 1.75rem;
+    --margin-xxl: 2.5rem;
+    --margin-xxxl: 3.75rem;
+    --margin-xxxxl: 6.25rem;
+    --margin-xxxxxl: 10rem;
+    --margin-xxxxxxl: 10rem;
+
+    /* Colors */
+    --gray10: hsl(0, 0%, 10%);
+    --gray30: hsl(0, 0%, 30%);
+    --gray50: hsl(0, 0%, 50%);
+    --gray70: hsl(0, 0%, 70%);
+    --gray90: hsl(0, 0%, 90%);
+
+    /* Webside Colors */
+    --bg-color: #14080e;
+    --text-color: #eeeeee;
+    --dark-color: #7e6dcb;
+    --contrast-color: #d57c26;
+    --greendy-color: #97a271;
+    --linking-color: #09d;
+
+    /* Langing page */
+    --ff: montserrat, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --h1: bold 4rem/1em var(--ff);
+    --h2: bold 3rem/1.2em var(--ff);
+    --h3: bold 2.25rem/1.2em var(--ff);
+    --h4: bold 1.5/1.6em var(--ff);
+    --big: 1.25rem/1.6em var(--ff);
+    --p: 1rem/1.6em var(--ff);
+    --small: .75/2em var(--ff);
+
+    /* UIs */
+    --h1ui: bold 3rem/1.2em var(--ff);
+    --h2ui: bold 2.25rem/1.2em var(--ff);
+    --h3ui: bold 1.5rem/1.2em var(--ff);
+    --h4ui: bold 1.12rem/1.6em var(--ff);
+    --bigui: bold 1rem/1.6em var(--ff);
+    --pui: bold .8rem/1.6em var(--ff);
+    --smallui: bold .75rem/1.8em var(--ff);
+
+}
+    
+
+* {
+    box-sizing: border-box;
+    font-family: var(--ff);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.site-header {
+    text-align: center;
+    padding: var(--margin-l);
+}
+
+.primary-button {
+    padding: var(--margin-m) var(--margin-l);
+    background-color: var(--contrast-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: var(--greendy-color);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: var(--margin-l);
+}
+
+.feature-card {
+    background: var(--gray10);
+    padding: var(--margin-m);
+    border-radius: 0.5rem;
+    flex: 1;
+    margin: var(--margin-xs);
+    text-align: center;
+}
+
+.site-footer {
+    text-align: center;
+    padding: var(--margin-m);
+    font-size: 0.9rem;
+}

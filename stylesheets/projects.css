@@ -1,0 +1,33 @@
+#projects{
+    width: 100dvw;
+    height: 100dvh;
+    padding: 1.25rem;
+    text-align: center;
+    position: relative;
+
+}
+
+.projects__container{
+    overflow-x: auto;
+    
+}
+
+#image-track > div{
+    text-align: center;
+}
+
+#image-track > div > .projects__image{
+    width: 40vmin;
+    height: 56vmin;
+    object-fit: cover;
+    object-position: 100% 50%;
+}
+
+#image-track{
+    display: flex;
+    gap: 4vmin;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
