@@ -95,3 +95,12 @@
     padding: var(--margin-m);
     font-size: 0.9rem;
 }
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}

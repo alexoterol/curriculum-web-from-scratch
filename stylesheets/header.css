@@ -1,59 +1,148 @@
-header{
-    min-height: 200dvh;
+header {
+    min-height: 100dvh;
     background-size: cover;
     background-position: center;
     display: flex;
+    position: absolute;
+    overflow: hidden;
 }
 
-.headerOPV{
+.headerOPV {
     min-height: 100dvh;
-    width: 100dvw;
+    width: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-
-    position: fixed;
-    top: 0;
-    mix-blend-mode: difference;
+    position: relative;
+    z-index: 10;
     justify-content: space-evenly;
-    
-
+    padding: 2rem;
 }
 
-.header__title{
-    
+.header__title {
+    margin-bottom: 2rem;
+    text-align: center;
 }
 
-.header__title--text{
-    padding: auto;
+.header__title--text {
+    font-size: 4rem;
+    letter-spacing: 0.1em;
 }
 
-.header__description{
-    width: 25dvw;
+.header__title--text span {
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+    background-color: transparent;
 }
 
+/* Staggered animation delay for each letter */
+.header__title--text span:nth-child(1) { animation-delay: 0.0s; }
+.header__title--text span:nth-child(2) { animation-delay: 0.1s; }
+.header__title--text span:nth-child(3) { animation-delay: 0.2s; }
+.header__title--text span:nth-child(4) { animation-delay: 0.3s; }
+.header__title--text span:nth-child(5) { animation-delay: 0.4s; }
+.header__title--text span:nth-child(6) { animation-delay: 0.5s; }
+.header__title--text span:nth-child(7) { animation-delay: 0.6s; }
+.header__title--text span:nth-child(8) { animation-delay: 0.7s; }
+.header__title--text span:nth-child(9) { animation-delay: 0.8s; }
 
-.header__flipcard{
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+.header__description {
+    width: clamp(300px, 25dvw, 500px);
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: transparent;
+}
+
+.header__description-title {
+    margin-bottom: 1rem;
+    background-color: transparent;
+    color: var(--dark-color);
+}
+
+.header__description--paragraph {
+    line-height: 1.6;
+    background-color: transparent;
+}
+
+.header__flipcard {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
     animation: appear-animation both;
     animation-timeline: scroll();
+    animation-range: 0 500px;
+}
 
+.header__flipcard-front,
+.header__flipcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--gray10);
+}
+
+.header__flipcard-back {
+    transform: rotateY(180deg);
+}
+
+.header__flipcard:hover .header__flipcard-front {
+    transform: rotateY(180deg);
+}
+
+.header__flipcard:hover .header__flipcard-back {
+    transform: rotateY(0);
 }
 
 @keyframes appear-animation {
-    0%{
+    0% {
         opacity: 0;
-        display: none;
-        filter: grayscale();
-        translate: 0 -20%;
-        scale: .8;
+        filter: grayscale(100%);
+        transform: translateY(20%) scale(0.8);
     }
-    100%{
+    50% {
+        opacity: 0;
+        filter: grayscale(100%);
+        transform: translateY(-20%) scale(0.8);
+    }
+    100% {
         opacity: 1;
-        display: block;
-        filter: grayscale();
-        translate: 0 0;
-        scale: 1;
+        filter: grayscale(0%);
+        transform: translateY(0) scale(1);
     }
+}
+
+/* Make particles background transparent */
+#particles-js {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#particles-js canvas {
+    display: block;
+}
+
+/* Hide stats display */
+.js-count-particles, 
+.count-particles {
+    display: none;
 }
