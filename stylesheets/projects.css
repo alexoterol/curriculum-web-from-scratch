@@ -1,5 +1,5 @@
 #projects{
-    width: 100dvw;
+    width: 100%;
     height: 100dvh;
     padding: 1.25rem;
     text-align: center;
@@ -7,16 +7,20 @@
 
 }
 
+.projects__title{
+    margin: bottom 1.25rem;
+}
+
 .projects__container{
     overflow-x: auto;
     
 }
 
-#image-track > div{
+#image-track > .projects__item{
     text-align: center;
 }
 
-#image-track > div > .projects__image{
+#image-track > .projects__item > .projects__image{
     width: 40vmin;
     height: 56vmin;
     object-fit: cover;
@@ -30,4 +34,25 @@
     left: 50%;
     top: 50%;
     transform: translate(0%, -50%);
+}
+
+.projects__image-track {
+    cursor: grab;
+}
+
+.projects__image-track:active {
+    cursor: grabbing;
+}
+
+.projects__image-track {
+    user-select: none;       /* Prevent text selection */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+
+    cursor: grab;
+}
+
+.projects__image-track:active {
+    cursor: grabbing;
 }

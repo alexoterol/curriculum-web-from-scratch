@@ -61,17 +61,16 @@ document.addEventListener('DOMContentLoaded', () => {
     track.dataset.percentage = "0";
     
     // Add event listeners
-    window.addEventListener('mousedown', handleMouseDown);
-    window.addEventListener('mousemove', handleMouseMove);
-    window.addEventListener('mouseup', handleMouseUp);
+    track.addEventListener('mousedown', handleMouseDown);
+    track.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseup', handleMouseUp); // this one stays global
     
     // Add touch support for mobile devices
-    window.addEventListener('touchstart', e => {
-        if (!isInProjectsSection()) return;
+    track.addEventListener('touchstart', e => {
         track.dataset.mouseDownAt = e.touches[0].clientX;
-    });
-    
-    window.addEventListener('touchmove', e => {
+    }, { passive: true });
+
+    track.addEventListener('touchmove', e => {
         if (track.dataset.mouseDownAt === "0" || !isInProjectsSection()) return;
         
         const touchDelta = parseFloat(track.dataset.mouseDownAt) - e.touches[0].clientX;
@@ -95,4 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     window.addEventListener('touchend', handleMouseUp);
+});
+
+
+// reveal animation
+
+document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+        const windowHeight = window.innerHeight;
+
+        revealElements.forEach((el) => {
+        const elementTop = el.getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+            el.classList.add("visible");
+        }
+        });
+    };
+
+    // Run once and on scroll
+    revealOnScroll();
+    window.addEventListener("scroll", revealOnScroll);
 });

@@ -1,0 +1,58 @@
+.policies__header {
+  background-color: var(--bg-color);
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+  border-bottom: 2px solid var(--gray30);
+}
+
+.policies__header h1 {
+  font-size: 2.5rem;
+  color: var(--contrast-color);
+  margin-bottom: 0.5rem;
+}
+
+.policies__header p {
+  font-size: 1rem;
+  color: var(--gray70);
+}
+
+.policies__back-button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  color: var(--linking-color);
+  text-decoration: none;
+  border: 1px solid var(--linking-color);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.policies__back-button:hover {
+  background-color: var(--contrast-color);
+  color: var(--bg-color);
+  border-color: var(--contrast-color);
+}
+
+.policies__content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: var(--text-color);
+  line-height: 1.8;
+}
+
+.policies__content h2 {
+  color: var(--greendy-color);
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.policies__content a {
+  color: var(--linking-color);
+  text-decoration: underline;
+}
+
+.policies__content a:hover {
+  color: var(--contrast-color);
+}

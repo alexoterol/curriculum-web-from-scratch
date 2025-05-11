@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="stylesheets/header.css">
     <link rel="stylesheet" href="stylesheets/navbar.css">
     <link rel="stylesheet" href="stylesheets/projects.css">
+    <link rel="stylesheet" href="stylesheets/colaborations.css">
+    <link rel="stylesheet" href="stylesheets/info.css">
+    <link rel="stylesheet" href="stylesheets/contact.css">
+    <link rel="stylesheet" href="stylesheets/footer.css">
 </head>
 <body>
     <!-- HEADER SECTION -->
-    <header id="particles-js">
+    <header id="home">
         <div class="headerOPV">
             <div class="header__title">
                 <h1 class="header__title--text">
@@ -21,10 +25,10 @@
             </div>
             <div class="header__description">
                 <h2 class="header__description-title">
-                    Creating systems for you.
+                    Creative Systems Developer.
                 </h2>
                 <p class="header__description--paragraph">
-                    My mission is helping people developing their own project to focus on more important things
+                    Helping you bring your project to life, so you can focus on what matters most.
                 </p>
             </div>
             <div class="header__flipcard">
@@ -46,6 +50,47 @@
                 </div>
             </div>
         </div>
+        
+                <!-- PROJECT SECTION -->    
+        <section id="projects" class="projects">
+            <div class="projects__header">
+                <h2 class="projects__title">Projects</h2>
+            </div>
+            <div class="projects__container">
+                <div class="projects__image-track" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/Python.png" draggable="false" alt=""/>
+                        <a href="" class="projects__description">TikTakToe with database system</a>
+                        <p class="projects__tech">Java, SQL</p>
+                    </div>
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/SnakeC.png" draggable="false" alt=""/>
+                        <a href="" class="projects__description">Snake Game</a>
+                        <p class="projects__tech">C</p>
+                    </div>
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/ArrithmIA.png" draggable="false" alt=""/>
+                        <a href="" class="projects__description">Arrythmia detector with IA</a>
+                        <p class="projects__tech">Python, Tensorflow, ...</p>
+                    </div>
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/20QUESTIONS.jpg" draggable="false" alt=""/>
+                        <a href="" class="projects__description">20 Questions Game</a>
+                        <p class="projects__tech">Java, JavaFX</p>
+                    </div>
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/chatbot.png" draggable="false" alt=""/>
+                        <a href="" class="projects__description">Chatbot Web</a>
+                        <p class="projects__tech">GeminiAPI, CSS, HTML, JS</p>
+                    </div>
+                    <div class="projects__item">
+                        <img class="projects__image" src="img/SCHEDULE.png" draggable="false" alt=""/>
+                        <a href="" class="projects__description">Schedule Program</a>
+                        <p class="projects__tech">Java, ...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </header>
 
     <!-- NAV SECTION -->
@@ -54,80 +99,114 @@
             <a href="#" class="navbar__logo">Alex Otero</a>
             <ul class="navbar__menu">
                 <li><a href="#projects" class="navbar__link">Projects</a></li>
+                <li><a href="#colaborations" class="navbar__link">Collaborations</a></li>
                 <li><a href="#info" class="navbar__link">About Me</a></li>
                 <li><a href="#contact-me" class="navbar__link">Contact</a></li>
-                <li><a href="#footer" class="navbar__link">Policy</a></li>
+                <li><a href="policies.html" class="navbar__link">Policies</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <!-- PROJECT SECTION -->
-        <section id="projects" class="projects">
-            <div class="projects__header">
-                <h2 class="projects__title">projects</h2>
-            </div>
-            <div class="projects__container">
-                <div class="projects__image-track" id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/DatabaseTiktakToe.png" draggable="false" alt=""/>
-                        <p class="projects__description">TikTakToe with database system</p>
-                        <p class="projects__tech">Java, SQL</p>
-                    </div>
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/SnakeC.png" draggable="false" alt=""/>
-                        <p class="projects__description">Snake Game</p>
-                        <p class="projects__tech">C</p>
-                    </div>
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/ArrithmIA.png" draggable="false" alt=""/>
-                        <p class="projects__description">Arrythmia detector with IA</p>
-                        <p class="projects__tech">Python, Tensorflow, ...</p>
-                    </div>
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/20QUESTIONS.jpg" draggable="false" alt=""/>
-                        <p class="projects__description">20 Questions Game</p>
-                        <p class="projects__tech">Java, JavaFX</p>
-                    </div>
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/chatbot.png" draggable="false" alt=""/>
-                        <p class="projects__description">Chatbot Web</p>
-                        <p class="projects__tech">GeminiAPI, CSS, HTML, JS</p>
-                    </div>
-                    <div class="projects__item">
-                        <img class="projects__image" src="img/SCHEDULE.png" draggable="false" alt=""/>
-                        <p class="projects__description">Schedule Program</p>
-                        <p class="projects__tech">Java, ...</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- COLABORATION SECTION -->
+        <!-- COLLABORATIONS SECTION -->
         <section id="colaborations" class="colaborations">
-            <div class="colaborations__content">
-                Here I should be putting all the logos of businesses or clubs I've been involved in
+            <h2 class="section-title">Collaborations</h2>
+            <p class="colaborations__description">Here are some of the brands and organizations I’ve worked with or contributed to:</p>
+            <div class="colaborations__grid">
+                <div class="colaborations__item reveal">
+                    <img src="img/Python.png" alt="Brand 1 logo" />
+                </div>
+                <div class="colaborations__item reveal">
+                    <img src="img/Python.png" alt="Brand 2 logo" />
+                </div>
+                <div class="colaborations__item reveal">
+                    <img src="img/Python.png" alt="Brand 3 logo" />
+                </div>
+                <div class="colaborations__item reveal">
+                    <img src="img/Python.png" alt="Brand 4 logo" />
+                </div>
             </div>
         </section>
 
         <!-- ABOUT ME SECTION -->
         <section id="info" class="info">
             <h2 class="info__title">All the things you need to know</h2>
+            <div class="info__cards">
+                <div class="info__card">
+                <div class="info__card-inner">
+                    <div class="info__card-front">
+                    <h3>Who am I?</h3>
+                    </div>
+                    <div class="info__card-back">
+                    <p>I'm Alex Otero, a passionate systems developer who loves creating efficient and scalable solutions.</p>
+                    </div>
+                </div>
+                </div>
 
-        </section>
+                <div class="info__card">
+                <div class="info__card-inner">
+                    <div class="info__card-front">
+                    <h3>My Skills</h3>
+                    </div>
+                    <div class="info__card-back">
+                    <p>Full-stack development, Java, Python, web apps, databases, AI/ML, creative interfaces.</p>
+                    </div>
+                </div>
+                </div>
+
+                <div class="info__card">
+                <div class="info__card-inner">
+                    <div class="info__card-front">
+                    <h3>What I Value</h3>
+                    </div>
+                    <div class="info__card-back">
+                    <p>Clean code, collaboration, innovation, and helping others turn ideas into products.</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+
 
         <!-- CONTACT ME SECTION -->
         <section id="contact-me" class="contact">
-            Here should be the form in order to ask me about work
-        </section>
-        <!-- FOOTER -->k
-        <footer id="footer" class="footer">
-            FooterxDXD
-        </footer>
-    </main>
+            <h2 class="contact__title">Let’s Work Together</h2>
+            <p class="contact__subtitle">Got a project or idea? Let's connect!</p>
 
-    <script src="code/header-background-animation/particle.min.js"></script>
-    <script src="code/header-background-animation/nodes.js"></script>
+            <form class="contact__form">
+                <div class="contact__form-group">
+                    <input type="text" name="name" placeholder="Your Name" required />
+                </div>
+                <div class="contact__form-group">
+                    <input type="email" name="email" placeholder="Your Email" required />
+                </div>
+                <div class="contact__form-group">
+                    <textarea name="message" rows="5" placeholder="Tell me about your project" required></textarea>
+                </div>
+                <button type="submit" class="contact__button">Send Message</button>
+            </form>
+        </section>
+
+        <!-- FOOTER -->
+        <footer id="footer" class="footer">
+            <div class="footer__content">
+                <p class="footer__title">Alex Otero</p>
+                <p class="footer__availability">
+                I'm an independent developer — open to work with awesome clients worldwide.
+                </p>
+                <div class="footer__socials">
+                    <a href="mailto:alexoterolim@gmail.com">alexoterolim@gmail.com</a>
+                </div>
+                <p class="footer__copyright">
+                &copy; 2025 Alex Otero. All rights reserved.
+                </p>
+            </div>
+            </footer>
+
+
+    </main>
+    
     <script src="code/pretty-scroll-animation.js/pretty-scroll.js"></script>
 </body>
 </html>
